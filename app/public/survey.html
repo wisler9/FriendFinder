@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       
+        <!-- Link to Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+   
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+  
+        <title>Survey</title>
+  </head>
+    <body id='body-id'>
+      <style>
+      #match-img{height:200px; width:200px;}
+      </style>
+      <!-- Modal -->
+     
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id='match-name'></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="dismiss-id-c">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div align='center'class="modal-body">
+              <img id='match-img' src='' 
+              alt='The matching player.'/>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" id="dismiss-id">Close</button>
+              <button type="button" class="btn btn-primary" id="dismiss-id-s">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  
+
+    <div class='container'>
+
+      <h2>Survey Questions</h2>
+
+      <hr>
+
+      <h3>
+        <strong>About Me</strong>
+      </h3>
+
+      <form  method='POST' role='form' action='/api/friends'>
+      <h4>Name (Required)</h4>
+      <input type='text' id='name' class='form-control' required>
+
+      <h4>Link to photo (Image required)</h4>
+      <input type='text' id='photo' class='form-control' required>
+
+      <hr>
+
+      <h3>
+        <strong>Question 1</strong>
+      </h3>
+      <h5>You look to others for support.</h5>
+      <div >
+          <style> 
+          .dropdown-item{background-color:rgb(212, 207, 201) ; width: 177.53px;  border: 1px solid black;}
+          .button-tab{background-color:rgb(212, 207, 201); width: 177.53px;  border: 1px solid black;}
+          .dropdown-options{ display:none; position:absolute;}
+          </style>
+          <div class='drop-down' >
+          <button class='options-tab' default='hidden' id = 'q01'>
+            Select an Option
+            </button>
+            <div class='dropdown-options' id='q01-dropdown' >
+            <button class="dropdown-item" type="button" value='1'>1(Strongly Disagree)</button>
+            <button class="dropdown-item" type="button" value='2'>2</button>
+            <button class="dropdown-item" type="button"value='3'>3</button>
+            <button class="dropdown-item" type="button"value='4'>4</button>
+            <button class="dropdown-item" type="button"value='5'>5(Strongly Agree)</button>
+          </div>
+          </div>
+        </div>
+
+      <h3>
+        <strong>Question 2</strong>
+      </h3>
+      <h5>Smiling is a great exercise for your face.</h5>
+      <div >
+        <style> 
+        .dropdown-item{background-color:rgb(212, 207, 201) ; width: 177.53px;  border: 1px solid black;}
+        .button-tab{background-color:rgb(212, 207, 201); width: 177.53px;  border: 1px solid black;}
+        .dropdown-options{ display:none; position:absolute;}
+        </style>
+        <div class='drop-down'  >
+        <button class='options-tab' default='hidden' id = 'q02'>
+          Select an Option
+          </button>
+          <div class='dropdown-options' id='q02-dropdown'>
+          <button class="dropdown-item" type="button" value= '1'>1(Strongly Disagree)</button>
+          <button class="dropdown-item" type="button" value= '2'>2</button>
+          <button class="dropdown-item" type="button"value= '3'>3</button>
+          <button class="dropdown-item" type="button"value= '4'>4</button>
+          <button class="dropdown-item" type="button"value= '5'>5(Strongly Agree)</button>
+        </div>
+        </div>
+      </div>
+
+       <h3>
+        <strong>Question 3</strong>
+        </h3>
+        <h5>The meaning of life is looking into my dog's eyes and understading that a simple mind is that which lives in bliss.</h5>
+          <div >
+            <style> 
+            .dropdown-item{background-color:rgb(212, 207, 201) ; width: 177.53px;  border: 1px solid black;}
+            .button-tab{background-color:rgb(212, 207, 201); width: 177.53px;  border: 1px solid black;}
+            .dropdown-options{ display:none; position:absolute;}
+            </style>
+            <div class='drop-down'  >
+            <button class='options-tab' default='hidden' id = 'q03'>
+              Select an Option
+              </button>
+              <div class='dropdown-options' id='q03-dropdown'>
+              <button class="dropdown-item" type="button" value= '1'>1(Strongly Disagree)</button>
+              <button class="dropdown-item" type="button" value= '2'>2</button>
+              <button class="dropdown-item" type="button"value= '3'>3</button>
+              <button class="dropdown-item" type="button"value= '4'>4</button>
+              <button class="dropdown-item" type="button"value= '5'>5(Strongly Agree)</button>
+            </div>
+            </div>
+          </div>
+
+        <h3>
+          <strong>Question 4</strong>
+        </h3>
+        <h5>I believe the government knows and has access to my internet search history.</h5>
+        <div >
+          <style> 
+          .dropdown-item{background-color:rgb(212, 207, 201) ; width: 177.53px;  border: 1px solid black;}
+          .button-tab{background-color:rgb(212, 207, 201); width: 177.53px;  border: 1px solid black;}
+          .dropdown-options{ display:none; position:absolute;}
+          </style>
+          <div class='drop-down'  >
+          <button class='options-tab' default='hidden' id = 'q04'>
+            Select an Option
+            </button>
+            <div class='dropdown-options' id='q04-dropdown'>
+            <button class="dropdown-item" type="button" value= '1'>1(Strongly Disagree)</button>
+            <button class="dropdown-item" type="button" value= '2'>2</button>
+            <button class="dropdown-item" type="button" value= '3'>3</button>
+            <button class="dropdown-item" type="button" value= '4'>4</button>
+            <button class="dropdown-item" type="button" value= '5'>5(Strongly Agree)</button>
+          </div>
+          </div>
+        </div>
+        <h3>
+          <strong>Question 5</strong>
+        </h3>
+        <h5>I understand that the government watches me, and yet this does not deter me from my online routines and practices.</h5>
+        <div >
+          <style> 
+          .dropdown-item{background-color:rgb(212, 207, 201) ; width: 177.53px;  border: 1px solid black;}
+          .button-tab{background-color:rgb(212, 207, 201); width: 177.53px;  border: 1px solid black;}
+          .dropdown-options{ display:none; position:absolute;}
+          </style>
+          <div class='drop-down'  >
+          <button class='options-tab' default='hidden' id = 'q05'>
+            Select an Option
+            </button>
+            <div class='dropdown-options' id='q05-dropdown'>
+            <button class="dropdown-item" type="button" value= '1'>1(Strongly Disagree)</button>
+            <button class="dropdown-item" type="button" value= '2'>2</button>
+            <button class="dropdown-item" type="button"value= '3'>3</button>
+            <button class="dropdown-item" type="button"value= '4'>4</button>
+            <button class="dropdown-item" type="button"value= '5'>5(Strongly Agree)</button>
+          </div>
+          </div>
+        </div>
+        <h3>
+        <strong>Question 6</strong>
+        </h3>
+        <h5>Cats are secretly out to get us all.</h5>
+        <div >
+          <style> 
+          .dropdown-item{background-color:rgb(212, 207, 201) ; width: 177.53px;  border: 1px solid black;}
+          .button-tab{background-color:rgb(212, 207, 201); width: 177.53px;  border: 1px solid black;}
+          .dropdown-options{ display:none; position:absolute;}
+          </style>
+          <div class='drop-down'  >
+          <button class='options-tab' default='hidden' id = 'q06'>
+            Select an Option
+            </button>
+            <div class='dropdown-options' id='q06-dropdown'>
+            <button class="dropdown-item" type="button" value= '1'>1(Strongly Disagree)</button>
+            <button class="dropdown-item" type="button" value= '2'>2</button>
+            <button class="dropdown-item" type="button"value= '3'>3</button>
+            <button class="dropdown-item" type="button"value= '4'>4</button>
+            <button class="dropdown-item" type="button"value= '5'>5(Strongly Agree)</button>
+          </div>
+          </div>
+        </div>
+        <h3>
+        <strong>Question 7</strong>
+        </h3>
+        <h5>If I ever met a celebrity I would try to act cool, even though its clear I can barely watch celebrities on tv without losing it.</h5>
+        <div >
+          <style> 
+          .dropdown-item{background-color:rgb(212, 207, 201) ; width: 177.53px;  border: 1px solid black;}
+          .button-tab{background-color:rgb(212, 207, 201); width: 177.53px;  border: 1px solid black;}
+          .dropdown-options{ display:none; position:absolute;}
+          </style>
+          <div class='drop-down'  >
+          <button class='options-tab' default='hidden' id = 'q07'>
+            Select an Option
+            </button>
+            <div class='dropdown-options' id='q07-dropdown'>
+            <button class="dropdown-item" type="button" value= '1'>1(Strongly Disagree)</button>
+            <button class="dropdown-item" type="button" value= '2'>2</button>
+            <button class="dropdown-item" type="button"value= '3'>3</button>
+            <button class="dropdown-item" type="button"value= '4'>4</button>
+            <button class="dropdown-item" type="button"value= '5'>5(Strongly Agree)</button>
+          </div>
+          </div>
+        </div>
+        <h3>
+        <strong>Question 8</strong>
+        </h3>
+        <h5>My emotions have a mind of its own, when I'm hungry.</h5>
+        <div >
+          <style> 
+          .dropdown-item{background-color:rgb(212, 207, 201) ; width: 177.53px;  border: 1px solid black;}
+          .button-tab{background-color:rgb(212, 207, 201); width: 177.53px;  border: 1px solid black;}
+          .dropdown-options{ display:none; position:absolute;}
+          </style>
+          <div class='drop-down'  >
+          <button class='options-tab' default='hidden' id = 'q08'>
+            Select an Option
+            </button>
+            <div class='dropdown-options' id='q08-dropdown'>
+            <button class="dropdown-item" type="button" value= '1'>1(Strongly Disagree)</button>
+            <button class="dropdown-item" type="button" value= '2'>2</button>
+            <button class="dropdown-item" type="button"value= '3'>3</button>
+            <button class="dropdown-item" type="button"value= '4'>4</button>
+            <button class="dropdown-item" type="button"value= '5'>5(Strongly Agree)</button>
+          </div>
+          </div>
+        </div>
+        <h3>
+        <strong>Question 9</strong>
+        </h3>
+        <h5>I like all kinds of music, except the kind I dont' like.</h5>
+        <div >
+          <style> 
+          .dropdown-item{background-color:rgb(212, 207, 201) ; width: 177.53px;  border: 1px solid black;}
+          .button-tab{background-color:rgb(212, 207, 201); width: 177.53px;  border: 1px solid black;}
+          .dropdown-options{ display:none; position:absolute;}
+          </style>
+          <div class='drop-down'  >
+          <button class='options-tab' default='hidden' id = 'q09'>
+            Select an Option
+            </button>
+            <div class='dropdown-options' id='q09-dropdown'>
+            <button class="dropdown-item" type="button" value= '1'>1(Strongly Disagree)</button>
+            <button class="dropdown-item" type="button" value= '2'>2</button>
+            <button class="dropdown-item" type="button"value= '3'>3</button>
+            <button class="dropdown-item" type="button"value= '4'>4</button>
+            <button class="dropdown-item" type="button"value= '5'>5(Strongly Agree)</button>
+          </div>
+          </div>
+        </div>
+        <h3>
+        <strong>Question 10</strong>
+        </h3>
+        <h5>The sky is there because we believe its there, not because it actually exists there.</h5>
+        <div >
+          <style> 
+          .dropdown-item{background-color:rgb(212, 207, 201) ; width: 177.53px;   border: 1px solid black;}
+          .button-tab{background-color:rgb(212, 207, 201); width: 177.53px;  border: 1px solid black;}
+          .dropdown-options{ display:none; position:absolute;}
+          .options-tab{width: 177.53px; margin-bottom:3px; }
+          h5 {margin:20px;}
+          h1 {margin-top:10px;}
+          
+          </style>
+           <div class='drop-down'  >
+            <button class='options-tab' default='hidden' id = 'q10'>
+              Select an Option
+              </button>
+              <div class='dropdown-options' id='q10-dropdown'>
+              <button class="dropdown-item" type="button" value= '1'>1(Strongly Disagree)</button>
+              <button class="dropdown-item" type="button" value= '2'>2</button>
+              <button class="dropdown-item" type="button"value= '3'>3</button>
+              <button class="dropdown-item" type="button"value= '4'>4</button>
+              <button class="dropdown-item" type="button"value= '5'>5(Strongly Agree)</button>
+            </div>
+            </div>
+          </div>
+        <style> 
+          #submitted{
+            margin:auto;
+            display:block;
+          }
+          
+
+          </style>
+        
+        <button id="submitted" type='submit' >Submit</button>
+    </div>
+
+
+
+
+  </form>
+
+
+    <script>
+
+$(".options-tab").on('click',function(e){
+  e.preventDefault();
+  var id = $(this).attr('id');
+   
+  if($(this).attr('default') === 'hidden'){
+    $('#'+id+'-dropdown').show();
+    $(this).attr('default','show');
+
+  }else if($(this).attr('default') === 'show'){
+    $('#'+id+'-dropdown').hide();
+    $(this).attr('default','hidden');
+  }
+ 
+});
+
+$('.dropdown-item').on('click', function(e){
+e.preventDefault();
+
+var val = $(this).attr('value');
+var id = $(this).parent().attr('id').slice(0,3);
+
+$('#'+id).text(val)
+
+    $('#'+id+'-dropdown').hide();
+    $('#id').attr('default','hidden');
+
+});
+
+
+
+
+
+
+
+  $('#submitted').on('click', function(event){
+  event.preventDefault();
+
+  var newUser = {
+  name:$('#name').val().trim(),
+  photo:$('#photo').val().trim(),
+  scores: [
+    $('#q01').text(),
+    $('#q02').text(),
+    $('#q03').text(),
+    $('#q04').text(),
+    $('#q05').text(),
+    $('#q06').text(),
+    $('#q07').text(),
+    $('#q08').text(),
+    $('#q09').text(),
+    $('#q10').text()
+
+  ]
+}
+// This is where we perform the post request to the server and compare the new users data to data already in the system to come up with a match.
+      $.post('/api/friends',newUser).
+      then(function(data){
+        var name = data.name;
+        var photo = data.photo;
+      
+        $('#match-name').text(name + ' is a perfect match for you!');
+        $('#match-img').attr('src',photo);
+
+        console.log(name);
+        console.log(photo);
+      });
+
+
+      // Rendering the Modal without the button after the user match is identified.
+      $('#body-id').attr('class','modal-open');
+      $('#modal-div').attr('class','modal-backdrop fade show');
+      $('#exampleModalCenter').attr('class', 'modal fade show');
+      $('#exampleModalCenter').attr('style','display:block');
+      // $('#exampleModalCenter').attr('aria-hidden', 'false');
+      
+      });
+
+      // The proceeding click events dismisses the modal after the user is finished with the information. This was just a quick fix until I can find a more efficient way to do this.
+      $('#dismiss-id').on('click', function(event){
+      $('#body-id').attr('class','null');
+      $('#modal-div').attr('class','null');
+      $('#exampleModalCenter').attr('class', 'null');
+      $('#exampleModalCenter').attr('style','display:none');
+      $('#exampleModalCenter').attr('aria-hidden', 'true');
+      location.reload();
+        });
+
+        $('#dismiss-id-c').on('click', function(event){
+      $('#body-id').attr('class','null');
+      $('#modal-div').attr('class','null');
+      $('#exampleModalCenter').attr('class', 'null');
+      $('#exampleModalCenter').attr('style','display:none');
+      $('#exampleModalCenter').attr('aria-hidden', 'true');
+      location.reload();
+        });
+
+        $('#dismiss-id-s').on('click', function(event){
+      $('#body-id').attr('class','null');
+      $('#modal-div').attr('class','null');
+      $('#exampleModalCenter').attr('class', 'null');
+      $('#exampleModalCenter').attr('style','display:none');
+      $('#exampleModalCenter').attr('aria-hidden', 'true');
+      location.reload();
+        });
+
+    </script>
+   
+   <div id="modal-div"></div>
+
+</body>
+</html>
