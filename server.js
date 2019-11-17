@@ -17,7 +17,7 @@ app.use("/api", routes );
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "/app/public/home.html"));
 });
-// app.use("/", htmlRoutes);
+
    
 app.get("/survey", function(req, res){
     res.sendFile(path.join(__dirname, "/app/public/survey.html"));
